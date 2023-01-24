@@ -10,7 +10,7 @@ config.prod = {
     port: 41070,
 }
 
-const envName = process.env.NODE_ENV
-const env = config[envName] ? config[envName] : config.dev;
+const envName = process.env.NODE_ENV;
+const envObj = config[envName] ? config[envName] : config.dev;
 
-export default env;
+export default envObj;
