@@ -1,4 +1,4 @@
-import { Hello } from "./components/Hello";
+import { Hello } from "./components/Hello.js";
 
 console.log('Labas rytas');
-console.log(Hello.speak());
+console.log(Hello.speak('Petras'));
