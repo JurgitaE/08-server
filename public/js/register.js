@@ -45,8 +45,22 @@ if (submitDOM) {
             console.log('Password ir repear passowrd nesutampa');
         }
 
-        if (usernameValid && passValid && emailValid && samePass) {
+        if (usernameValid && passValid && emailValid && samePass && tosDOM.checked) {
             console.log('Viskas ok');
+
+            const data = {
+                username: usernameDOM.value,
+                email: emailDOM.value,
+                password: passDOM.value,
+            };
+
+            fetch('/api/register', {
+                method: 'POST',
+                header: {
+                    contentType: 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
         }
     }
 
